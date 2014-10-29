@@ -1,0 +1,46 @@
+{
+  "name": "triager",
+  "description": "Automatic assigning of new issues",
+  "tags": [
+    "github",
+    "agile",
+    "issues"
+  ],
+  "version": "1.0.0",
+  "author": "jlipps@gmail.com",
+  "licenses": [
+    {
+      "type": "apache-2.0",
+      "url": "https://raw.github.com/jlipps/triager/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlipps/triager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jlipps/triager/issues"
+  },
+  "engines": [
+    "node"
+  ],
+  "main": "./lib/es5/main.js",
+  "bin": {},
+  "directories": {
+    "lib": "./lib/es6"
+  },
+  "dependencies": {
+    "traceur": "0.0.72",
+    "q": "^1.0.1",
+    "assert": "^1.1.2",
+    "minimist": "^1.1.0",
+    "lodash": "^2.4.1",
+    "octonode": "^0.6.9"
+  },
+  "scripts": {},
+  "devDependencies": {
+    "gulp-traceur": "^0.13.0",
+    "gulp": "^3.8.9",
+    "request": "^2.47.0"
+  }
+}
