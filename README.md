@@ -126,9 +126,10 @@ I wanted to explore some of the upcoming JS language features, so I went wild
 with it. That's the reason we use
 [Traceur](https://github.com/google/traceur-compiler) to transpile back to ES5
 for running on vanilla Node systems. It goes without saying I'm probably doing
-some things wrong, but this was a lot of fun. I also couldn't resist making my
-own mini webserver + routing, which I probably didn't need to do. Anyway, Some
-fun ES6/ES7 features you'll see in the codebase:
+some things wrong and went overboard trying to use as many features as possible
+in sometimes inconsistent ways, but this was a lot of fun. I also couldn't
+resist making my own mini webserver + routing, which I probably didn't need to
+do. Anyway, Some fun ES6/ES7 features you'll see in the codebase:
 
 * `import`/`export`
 * `const`/`let` in addition to `var`
@@ -136,5 +137,6 @@ fun ES6/ES7 features you'll see in the codebase:
 * destructured assignment
 * JS classes
 * rest args and spreads
+* inline string templates
 
 Get excited for the future of JS!
