@@ -14,12 +14,14 @@ which people you want in the triage rotation, e.g.:
   {
     "user": "appium",
     "repo": "appium",
-    "triagers": ["jlipps", "imurchie", "jonahss", "sebv", "0x1mason"]
+    "triagers": ["jlipps", "imurchie", "jonahss", "sebv", "0x1mason"],
+    "labels": ["NeedsTriage"]
   },
   {
     "user": "appium",
     "repo": "appium-uiauto",
-    "triagers": ["jlipps", "penguinho"]
+    "triagers": ["jlipps", "penguinho"],
+    "labels": ["AutoAssigned"]
   }
 ]}
 ```
