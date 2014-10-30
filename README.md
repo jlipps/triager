@@ -36,26 +36,25 @@ a place to host the server itself:
 1. You need to configure a json file with the repos you want to listen to and
    then which people you want in the triage rotation, e.g.:
 
-```json
-{"repos": [
-  {
-    "user": "appium",
-    "repo": "appium",
-    "triagers": ["jlipps", "imurchie", "jonahss", "sebv", "0x1mason"],
-    "labels": ["NeedsTriage"]
-  },
-  {
-    "user": "appium",
-    "repo": "appium-uiauto",
-    "triagers": ["jlipps", "penguinho"],
-    "labels": ["AutoAssigned"]
-  }
-]}
-```
+   ```json
+   {"repos": [
+     {
+       "user": "appium",
+       "repo": "appium",
+       "triagers": ["jlipps", "imurchie", "jonahss", "sebv", "0x1mason"],
+       "labels": ["NeedsTriage"]
+     },
+     {
+       "user": "appium",
+       "repo": "appium-uiauto",
+       "triagers": ["jlipps", "penguinho"],
+       "labels": ["AutoAssigned"]
+     }
+   ]}
+   ```
 
-(Note you can also use labels if you want to designate issues which have been
-assigned with Triager).
-
+   (Note you can also use labels if you want to designate issues which have been
+   assigned with Triager).
 2. Then you need to configure a GitHub access token that has write access to
    the repos you want to triage. You can make these with your own user account,
    or you can create a separate GitHub account just to use as a bot in this
@@ -77,12 +76,25 @@ node . --port=<port> --host=<host> --config=</path/to/config>
 The `gulp` command merely does the Traceur transpilation required to get
 everything into plain old ES5 JavaScript.
 
+The server exposes two HTTP endpoints:
+
+```
+/triager         # endpoint for the GitHub webhook
+/triager/status  # get some JSON info about the server's assignment history
+```
+
 Set up GitHub webhooks
 -------
 
 Now you can set up your webhook on GitHub, under settings for your repo(s).
 Make sure to only send information about issues---no need to listen for
-anything else. At this point you should be good to go!
+anything else. So if our server is running at `http://somplace.com:4567`, then we will want to add the GitHub webhook url of:
+
+```
+http://sompleace.com:4567/triager
+```
+
+At this point you should be good to go!
 
 Retroactively assigning old Issues
 -------
@@ -115,4 +127,3 @@ fun ES6/ES7 features you'll see in the codebase:
 * rest args and spreads
 
 Get excited for the future of JS!
-
