@@ -66,9 +66,20 @@ a place to host the server itself:
 Run the server
 -------
 
-With all this in place, it's super simple to run the server:
+With all this in place, it's super simple to install and run the server:
 
 ```
+npm install -g triager
+triager --port=<port> --host=<host> --config=</path/to/config>
+```
+
+If you want to run from source, it's also easy:
+
+```
+npm install -g gulp  # if you don't already have gulp globally
+git clone https://github.com/jlipps/triager.git
+cd triager
+npm install
 gulp
 node . --port=<port> --host=<host> --config=</path/to/config>
 ```
@@ -103,7 +114,7 @@ You can also have Triager assign all currently open and un-milestoned issues!
 Just run `gulp` (as always), then:
 
 ```
-TRIAGER_TOKEN=<github token> node lib/es5/retro.js --config=</path/to/config>
+TRIAGER_TOKEN=<github token> retro_triager --config=</path/to/config>
 ```
 
 This doesn't require a server, and it should be idempotent, so this is nice if
