@@ -1,4 +1,4 @@
-triager
+Triager
 =======
 
 A server that automatically assigns team members to new issues to triage
@@ -43,3 +43,16 @@ GitHub
 
 Now you can set up your host and port as a webhook on GitHub. It should only
 receive the issue hooks.
+
+Old Issues
+-------
+
+You can have Triager assign all currently open and un-milestoned issues too!
+Just run `gulp` then:
+
+```
+TRIAGER_TOKEN=<github token> node lib/es5/retro.js --config=</path/to/config>
+```
+
+This doesn't require a server, and it should be idempotent, so this is nice if
+you just want to run a cron script or a one-time retroactive assignment.
