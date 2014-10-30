@@ -25,7 +25,10 @@
     "node"
   ],
   "main": "./lib/es5/main.js",
-  "bin": {},
+  "bin": {
+    "triager": "./lib/es5/main.js",
+    "retro_triager": "./lib/es5/retro.js"
+  },
   "directories": {
     "lib": "./lib/es6"
   },
