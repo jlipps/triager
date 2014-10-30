@@ -2,3 +2,4 @@ node_modules
 lib/es5
 config.json
 *.log
+.assignmentcache.json

@@ -52,10 +52,10 @@
   },
   "repository": {
     "id": 20000106,
-    "name": "appium",
+    "name": "triager",
     "full_name": "baxterthehacker/public-repo",
     "owner": {
-      "login": "appium",
+      "login": "jlipps",
       "id": 6752317,
       "avatar_url": "https://avatars.githubusercontent.com/u/6752317?v=2",
       "gravatar_id": "",
