@@ -35,7 +35,8 @@
     "assert": "^1.1.2",
     "minimist": "^1.1.0",
     "lodash": "^2.4.1",
-    "octonode": "^0.6.9"
+    "octonode": "^0.6.9",
+    "winston": "^0.8.1"
   },
   "scripts": {},
   "devDependencies": {
