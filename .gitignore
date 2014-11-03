@@ -1,5 +1,6 @@
 node_modules
 lib/es5
+test/es5
 config*.json
 *.log
 .assignmentcache.json
