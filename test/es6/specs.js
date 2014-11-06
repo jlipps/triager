@@ -68,5 +68,16 @@ describe("IssueAssigner", () => {
       ia._calls.assignOnGithub.should.equal(calls);
       ia.assignmentHistory.get("jlipps/triager").get("jlipps").length.should.equal(calls);
     });
+
+    it('should not assign pull requests', async () => {
+      let ia = getIssueAssigner('config1.json');
+      assertInitialBasicConfig(ia);
+      ia._calls.assignOnGithub.should.equal(0);
+      let issue = getFixture('issue2.json');
+      await ia.assignIssue(issue);
+      ia._calls.assignOnGithub.should.equal(0);
+      ia._calls.assignIssue.should.equal(1);
+      ia.assignmentHistory.get("jlipps/triager").get("jlipps").length.should.equal(0);
+    });
   });
 });
