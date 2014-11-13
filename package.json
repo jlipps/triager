@@ -33,13 +33,14 @@
     "lib": "./lib/es6"
   },
   "dependencies": {
-    "traceur": "0.0.72",
+    "traceur": "0.0.74",
     "q": "^1.0.1",
     "assert": "^1.1.2",
     "minimist": "^1.1.0",
     "lodash": "^2.4.1",
     "octonode": "^0.6.9",
-    "winston": "^0.8.1"
+    "winston": "^0.8.1",
+    "source-map-support": "^0.2.8"
   },
   "scripts": {
     "test": "$(npm bin)/gulp && $(npm bin)/mocha test/es5/specs.js"
@@ -54,6 +55,8 @@
     "merge-stream": "^0.1.6",
     "mocha": "^2.0.1",
     "should": "^4.1.0",
-    "sinon": "^1.11.1"
+    "sinon": "^1.11.1",
+    "rtts-assert": "0.0.7",
+    "gulp-sourcemaps": "^1.2.8"
   }
 }

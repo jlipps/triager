@@ -2,7 +2,7 @@ import { IssueAssigner } from '../../lib/es5/assigner';
 import { getEmptyLogger } from '../../lib/es5/logger';
 
 class MockIssueAssigner extends IssueAssigner {
-  constructor (...args) {
+  constructor (...args):void {
     this._calls = {
       'assignOnGithub': 0,
       'assignIssue': 0
@@ -11,12 +11,11 @@ class MockIssueAssigner extends IssueAssigner {
     this.logger = getEmptyLogger();
   }
 
-  async assignOnGithub () {
+  async assignOnGithub ():void {
     this._calls.assignOnGithub++;
-    return [{assignee: {login: 'jlipps'}}, {status: '200 OK'}];
   }
 
-  async assignIssue (...args) {
+  async assignIssue (...args):void {
     this._calls.assignIssue++;
     return await super(...args);
   }
