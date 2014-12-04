@@ -6,5 +6,6 @@
   "eqeqeq": true,
   "trailing": true,
   "indent": 2,
-  "esnext": true
+  "esnext": true,
+  "experimental": ["asyncawait"]
 }
