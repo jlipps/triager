@@ -50,7 +50,9 @@ a place to host the server itself:
        "triagers": ["jlipps", "penguinho"],
        "labels": ["AutoAssigned"]
      }
-   ]}
+   ],
+   "bot": "triager-bot"
+   }
    ```
 
    (Note you can also use labels if you want to designate issues which have been
