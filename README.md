@@ -50,7 +50,9 @@ a place to host the server itself:
        "triagers": ["jlipps", "penguinho"],
        "labels": ["AutoAssigned"]
      }
-   ]}
+   ],
+   "bot": "triager-bot"
+   }
    ```
 
    (Note you can also use labels if you want to designate issues which have been
@@ -62,6 +64,7 @@ a place to host the server itself:
    it [here](https://github.com/blog/1509-personal-api-tokens)), just export it
    in your env as `TRIAGER_TOKEN`. It's much safer for it to be an env variable
    than in your code somewhere.
+3. Give your webhook a secret and export it in your env as `WEBHOOK_SECRET`.
 
 Run the server
 -------
