@@ -33,8 +33,9 @@ Requirements
 You need basically two things to make all this work, in addition to setting up
 a place to host the server itself:
 
-1. You need to configure a json file with the repos you want to listen to and
-   then which people you want in the triage rotation, e.g.:
+1. You need to configure a json file with the repos you want to listen to,
+   which people you want in the triage rotation and whether triagers should
+   be assigned issues automatically, e.g.:
 
    ```json
    {"repos": [
@@ -42,12 +43,14 @@ a place to host the server itself:
        "user": "appium",
        "repo": "appium",
        "triagers": ["jlipps", "imurchie", "jonahss", "sebv", "0x1mason"],
+       "autoAssign": true,
        "labels": ["NeedsTriage"]
      },
      {
        "user": "appium",
        "repo": "appium-uiauto",
        "triagers": ["jlipps", "penguinho"],
+       "autoAssign": true,
        "labels": ["AutoAssigned"]
      }
    ],
