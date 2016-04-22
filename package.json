@@ -33,14 +33,14 @@
     "lib": "./lib/es6"
   },
   "dependencies": {
-    "traceur": "0.0.74",
-    "q": "^1.0.1",
+    "appium-logger": "^2.1.0",
     "assert": "^1.1.2",
-    "minimist": "^1.1.0",
     "lodash": "^2.4.1",
+    "minimist": "^1.1.0",
     "octonode": "^0.6.9",
-    "winston": "^0.8.1",
-    "source-map-support": "^0.2.8"
+    "q": "^1.0.1",
+    "source-map-support": "^0.2.8",
+    "traceur": "0.0.74"
   },
   "scripts": {
     "test": "$(npm bin)/gulp && $(npm bin)/mocha test/es5/specs.js"
