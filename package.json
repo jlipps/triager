@@ -36,11 +36,13 @@
     "appium-logger": "^2.1.0",
     "assert": "^1.1.2",
     "koa": "^2.0.0",
+    "koa-bodyparser": "^3.0.0",
     "koa-router": "^7.0.1",
     "lodash": "^2.4.1",
     "minimist": "^1.1.0",
     "octonode": "^0.6.9",
     "q": "^1.0.1",
+    "raw-body": "^2.1.6",
     "source-map-support": "^0.2.8",
     "traceur": "0.0.74"
   },
