@@ -44,14 +44,16 @@ a place to host the server itself:
        "repo": "appium",
        "triagers": ["jlipps", "imurchie", "jonahss", "sebv", "0x1mason"],
        "autoAssign": true,
-       "labels": ["NeedsTriage"]
+       "autoLabel": ["AutoAssigned"],
+       "validLabels": ["some", "allowed", "labels"]
      },
      {
        "user": "appium",
        "repo": "appium-uiauto",
        "triagers": ["jlipps", "penguinho"],
        "autoAssign": true,
-       "labels": ["AutoAssigned"]
+       "autoLabel": ["AutoAssigned"],
+       "validLabels": ["some", "allowed", "labels"]
      }
    ],
    "bot": "triager-bot"
