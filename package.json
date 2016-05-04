@@ -33,7 +33,6 @@
     "lib": "./lib/es6"
   },
   "dependencies": {
-    "appium-logger": "^2.1.0",
     "assert": "^1.1.2",
     "koa": "^2.0.0",
     "koa-bodyparser": "^3.0.0",
@@ -44,7 +43,8 @@
     "q": "^1.0.1",
     "raw-body": "^2.1.6",
     "source-map-support": "^0.2.8",
-    "traceur": "0.0.74"
+    "traceur": "0.0.74",
+    "winston": "^2.2.0"
   },
   "scripts": {
     "test": "$(npm bin)/gulp && $(npm bin)/mocha test/es5/specs.js"
