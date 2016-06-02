@@ -2,7 +2,8 @@ Triager
 =======
 
 A server that automatically assigns team members to new issues for them to
-address or triage.  Currently, it works with GitHub. It should work regardless
+address or triage. Triager also allows select users to label, close and
+reopen issues. Currently, it works with GitHub. It should work regardless
 of whether a repo or set of repos is private or public. This project is
 currently running for [Appium](https://appium.io) as a way to make sure bug
 reports don't slip through the cracks. It's also a sort of Node + ES6/ES7
@@ -27,6 +28,28 @@ assigned and assigns new issues to the one with the fewest assigned issues.
 This is also stored as a cache on disk so if the server is restarted it will
 pick up where it left off.
 
+Commands
+------
+
+Triagers can label, close and reopen issues by sending commands through
+issue comments. This allows limited [write permissions]
+(https://help.github.com/articles/repository-permission-levels-for-an-organization/).
+
+**Label an issue:**
+```
+@triager-bot please label: some, valid, labels.
+```
+
+**Close an open issue:**
+```
+@triager-bot please close.
+```
+
+**Reopen a closed issue:**
+```
+@triager-bot please open.
+```
+
 Requirements
 -----
 
@@ -45,7 +68,7 @@ a place to host the server itself:
        "triagers": ["jlipps", "imurchie", "jonahss", "sebv", "0x1mason"],
        "autoAssign": true,
        "autoLabel": ["AutoAssigned"],
-       "validLabels": ["some", "allowed", "labels"]
+       "validLabels": ["some", "valid", "labels"]
      },
      {
        "user": "appium",
@@ -53,7 +76,7 @@ a place to host the server itself:
        "triagers": ["jlipps", "penguinho"],
        "autoAssign": true,
        "autoLabel": ["AutoAssigned"],
-       "validLabels": ["some", "allowed", "labels"]
+       "validLabels": ["some", "valid", "labels"]
      }
    ],
    "bot": "triager-bot"
