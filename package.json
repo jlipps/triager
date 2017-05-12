@@ -27,7 +27,7 @@
   "main": "./lib/es5/main.js",
   "scripts": {
     "test": "$(npm bin)/gulp && $(npm bin)/mocha test/es5/specs.js",
-    "start": "node . --port $TRIAGER_PORT --host 127.0.0.1 --log $TRIAGER_LOG --config $TRIAGER_CONFIG"
+    "start": "$(npm bin)/gulp && node . --port $TRIAGER_PORT --host 127.0.0.1 --log $TRIAGER_LOG --config $TRIAGER_CONFIG"
   },
   "bin": {
     "triager": "./lib/es5/main.js",
