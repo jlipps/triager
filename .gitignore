@@ -4,3 +4,4 @@ test/es5
 config*.json
 *.log
 .assignmentcache.json
+deploy.sh

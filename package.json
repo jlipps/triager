@@ -25,6 +25,9 @@
     "node"
   ],
   "main": "./lib/es5/main.js",
+  "scripts": {
+    "start": "node . --port 80 --host 127.0.0.1 --log triager.log"
+  },
   "bin": {
     "triager": "./lib/es5/main.js",
     "retro_triager": "./lib/es5/retro.js"
