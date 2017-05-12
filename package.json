@@ -26,7 +26,8 @@
   ],
   "main": "./lib/es5/main.js",
   "scripts": {
-    "start": "node . --port 80 --host 127.0.0.1 --log triager.log"
+    "test": "$(npm bin)/gulp && $(npm bin)/mocha test/es5/specs.js",
+    "start": "node . --port $TRIAGER_PORT --host 127.0.0.1 --log $TRIAGER_LOG --config $TRIAGER_CONFIG"
   },
   "bin": {
     "triager": "./lib/es5/main.js",
@@ -45,12 +46,10 @@
     "octonode": "^0.6.9",
     "q": "^1.0.1",
     "raw-body": "^2.1.6",
+    "request-promise": "^4.2.1",
     "source-map-support": "^0.2.8",
     "traceur": "0.0.74",
     "winston": "^2.2.0"
-  },
-  "scripts": {
-    "test": "$(npm bin)/gulp && $(npm bin)/mocha test/es5/specs.js"
   },
   "devDependencies": {
     "gulp-traceur": "^0.13.0",
